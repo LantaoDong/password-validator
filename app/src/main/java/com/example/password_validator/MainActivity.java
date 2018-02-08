@@ -10,6 +10,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    //rule 1: it is not "password"
+    public static boolean notEqualPassword(String password){
+        boolean NotEqualPassword = false;
+        if(!password.toLowerCase().equals("password"))
+            NotEqualPassword = true;
+        return NotEqualPassword;
+    }
+    //rule 2: at least 8 characters
+    public static boolean atLeastEight(String password){
+        boolean atLeastEight = false;
+        if(password.length()>=8)
+            atLeastEight = true;
+        return atLeastEight;
+
+    }
     //rule 3: contain at least one digit
     public static boolean atLeastOneDigit(String password){
         boolean AtLeastOneDigit = false;
